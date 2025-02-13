@@ -5,3 +5,4 @@ public interface Immobilier {
     public double convert();
     public boolean egal(Immobilier immobilier);
 }
+
