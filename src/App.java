@@ -5,32 +5,12 @@ public class App {
 
 
     public static void main(String[] args) {
-        Bien bien = saisieBien();
-        Proprietaire p = saisirProprietaire();
-        bien.setProprietaire(p);
-        Bien b2 = saisieBien();
-        b2.setProprietaire(p);
+        // Bien bien = saisieBien();
+        // Bien b2 = saisieBien();
+        // afficherBien(bien);
+        // afficherBien(b2);
 
-        afficherBien(bien);
-        afficherBien(b2);
-    }
-
-    public static Proprietaire saisirProprietaire() {
-        System.out.println("Nom: ");
-        String nom = sc.nextLine();
-        System.out.println("Prénom: ");
-        String prenom = sc.nextLine();
-        System.out.println("Téléphone: ");
-        String telephone = sc.nextLine();
-
-        Proprietaire proprietaire = new Proprietaire(nom, prenom, telephone);
-        return proprietaire;
-    }
-
-    public static void saisirNProprietaire(int n) {
-        for (int i = 0; i < n; i++) {
-            saisirProprietaire();
-        }
+        saisirNBien(2);
     }
 
     public static Bien saisieBien() {
@@ -53,18 +33,15 @@ public class App {
     }
 
     public static void afficherBien(Bien bien) {
-        System.out.println(bien.toChaine());
+        System.out.println(bien.toChaine()+"\n\n");
     }
 
     public static void saisirNBien(int n) {
-        Bien bien;
-        Bien bienMax = new Bien();
+        Bien bien[] = new Bien[n];
         for (int i = 0; i < n; i++) {
-            bien = saisieBien();
-            if (bien.getSuperficie() > bienMax.getSuperficie()) {
-                bienMax.copy(bien);
-            }
+            bien[i] = saisieBien();
+            afficherBien(bien[i]);
+
         }
-        afficherBien(bienMax);
     }
 }

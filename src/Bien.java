@@ -87,7 +87,6 @@ public class Bien {
                "\nPrix: " + prix +
                "\nAdresse: " + adresse +
                "\nDescription: " + description +
-               "\nSuperficie: " + superficie +
-               "\nPropriétaire:\n\n\n" + proprietaire.toChaine();
+               "\nSuperficie: " + superficie;
     }
 }
